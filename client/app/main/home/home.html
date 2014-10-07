@@ -1,0 +1,30 @@
+<header>
+  <section class="container">
+
+    <div class="row">
+      <div id="new-post" class="box-12">
+        <input type="text" placeholder="What's on your mind?">
+      </div>
+    </div>
+
+    <div class="row links">
+      <div class="box-2"
+        ng-class="{active: home.filter === ''}"
+        ng-click="home.filter = ''">
+          All Posts
+      </div>
+      <div class="box-2"
+        ng-class="{active: home.filter === 'photo'}"
+        ng-click="home.filter = 'photo'">
+          Photos
+      </div>
+      <div class="box-2">Videos</div>
+    </div>
+
+  </section>
+</header>
+
+  <section class="container" id="feed">
+    <ss-post post="post" ng-repeat="post in home.posts | filter:home.filter | orderBy:'message.created'"></ss-post>
+  </section>
+<footer>footer</footer>

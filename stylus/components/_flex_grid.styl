@@ -1,0 +1,49 @@
+.box
+  flex 1 1 8%
+  margin 0 0 0.5rem 0
+  padding 0.5em 10px
+  box-sizing border-box
+
+  & .center
+    flex-grow 0
+    flex-shrink 0
+
+.row
+  display flex
+  flex-direction row
+  flex-wrap wrap
+
+  & .row, .row.nested
+    flex 1 1 auto
+    margin-top -0.5em
+
+  & .wide
+    margin-left -10px
+    margin-right -10px
+
+  & .center
+    justify-content center
+
+.container
+  margin-left 360px
+  margin-right 360px
+
+calcPercentage(num)
+  num / 12 * 100
+
+for num in (1..12)
+  .box-{num}
+    flex-basis unit(calcPercentage(num), '%')
+
+
+@media all and (max-width: 569px)
+  for num in (1..5)
+    .box-{num}
+      flex-basis 50%
+
+  for num in (6..11)
+    .box-{num}
+      flex-basis 100%
+
+  .nested .box
+    flex-basis 100%

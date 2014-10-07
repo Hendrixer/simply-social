@@ -1,0 +1,55 @@
+div
+  box-sizing border-box
+
+header
+  height 425px
+  max-height 425px
+  background url(../images/van2x.jpg) no-repeat top center
+  background-size cover
+  box-sizing border-box
+  padding-top 120px
+
+  & #new-post
+    background-color accent-mild
+    opacity 0.6
+    height 155px
+    padding 20px
+    color white
+
+    & input
+      background-color accent-mild
+      border none
+      padding 20px 10px
+      line-height 28px
+      width 100%
+      font-size 1.9em
+      color azure
+      font-family ProximaNova
+      font-weight 100
+
+      &:focus
+        outline-width 0
+
+      &::-webkit-input-placeholder
+        color azure
+
+  & .links
+    color white
+    margin-top 80px
+    height 70px
+    padding-top 30px
+    color azure
+
+    & div
+      text-align center
+      margin-right 8px
+      color azure
+
+      &:hover
+        cursor pointer
+
+      &.active
+        border-bottom accent solid 4px
+
+
+

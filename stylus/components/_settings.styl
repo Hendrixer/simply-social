@@ -1,0 +1,126 @@
+#settings
+  padding-top 70px
+  height 100%
+
+  & section
+    border-bottom solid lightgray 2px
+    padding-bottom 30px
+
+    & .row .title
+      margin-top 50px
+      margin-bottom 20px
+
+    & .settings-form
+      // border-bottom solid gray 2px
+      padding-bottom 30px
+
+      & div:nth-child(2)
+        width 100%
+
+      & input
+        width 80%
+        margin-bottom 15px
+
+.label
+  padding-top 25px
+
+.switch
+  margin-bottom 15px
+.settings-img
+  display block
+
+inputs = email phone thing
+
+input[id^=notify]
+  max-height 0
+  max-width 0
+  opacity 0
+
+  & + label
+    display block
+    position relative
+    box-shadow inset 0 0 0px 1px #d5d5d5
+    text-indent -5000px
+    height 30px
+    width 60px
+    border-radius 15px
+
+    &:hover
+      cursor pointer
+
+    &:before
+      content ""
+      position absolute
+      display block
+      height 30px
+      width 30px
+      top 0
+      left 0
+      border-radius 15px
+      background rgba(19,191,17,0)
+      transition .25s ease-in-out
+
+    &:after
+      content ""
+      position absolute
+      display block
+      height 30px
+      width 30px
+      top 0
+      left 0px
+      border-radius 15px
+      background white
+      box-shadow inset 0 0 0 1px rgba(0,0,0,.2), 0 2px 4px rgba(0,0,0,.2)
+      transition .25s ease-in-out
+
+  &:checked + label:before
+    width 60px
+    background accent
+
+  &:checked + label:after
+    left 30px
+    box-shadow inset 0 0 0 1px accent, 0 2px 4px rgba(0,0,0,.2)
+
+
+input[id^=pri]
+  max-height 0
+  max-width 0
+  opacity 0
+
+  & + label
+    display block
+    position relative
+    text-indent -5000px
+    height 22px
+    width 22px
+    border-radius 100%
+    border solid #d5d5d5 2px
+
+    &:after
+      content ""
+      position absolute
+      opacity 0
+      display block
+      height 16px
+      width 16px
+      top 3px
+      left 3px
+      border-radius 100%
+      background white
+      transition .25s ease-in-out
+
+    &:hover:after
+      cursor pointer
+      background accent
+      opacity 0.6
+
+  &:checked + label:after
+    transform scale(1.1)
+    opacity 1
+    transform-origin center
+    background accent
+
+
+
+
+
