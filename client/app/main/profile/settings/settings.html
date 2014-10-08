@@ -1,28 +1,37 @@
 <div class="container" id="settings">
 
   <div class="row">
-    <div class="box-12">
-      <h4>Settings</h4>
+    <div class="box-12 main">
+      <h2>Settings</h2>
     </div>
   </div>
 
   <section class="account">
 
-    <div class="row">
-      <div class="box-12 title"><h6>ACCOUNT</h6></div>
+    <div class="row sep">
+      <div class="box-12 title"><h5>ACCOUNT</h5></div>
     </div>
 
     <div class="row settings-form">
       <div class="box-3">
-        <img src="//http" alt="" class="settings-img">
-        <button>change</button>
+        <img src="http://img2.wikia.nocookie.net/__cb20120221170644/adventuretimewithfinnandjake/images/3/33/Lemongrab_Smile.jpg" alt="" width="60%"class="round avatar">
+        <button class="button button-clear change">change</button>
       </div>
 
       <div class="box-9">
         <form name="settingsForm" novalidate ng-submit="">
-          <input type="text">
-          <input type="text">
-          <input type="text">
+          <div class="input-group settings">
+            <span><i class="fa fa-user"></i></span>
+            <input type="text">
+          </div>
+          <div class="input-group settings">
+            <span><i class="fa fa-envelope-o"></i></span>
+            <input type="text">
+          </div>
+          <div class="input-group settings">
+            <span><i class="fa fa-lock"></i></span>
+            <input type="password">
+          </div>
         </form>
       </div>
     </div>
@@ -31,7 +40,7 @@
 
   <section class="notification">
       <div class="row">
-        <div class="box-12 title"><h6>NOTIFICATIONS</h6></div>
+        <div class="box-12 title"><h5>NOTIFICATIONS</h5></div>
       </div>
 
       <div class="row">
@@ -84,14 +93,14 @@
 
   <section class="privacy">
     <div class="row">
-      <div class="box-12 title"><h6>PRIVACY</h6></div>
+      <div class="box-12 title"><h5>PRIVACY</h5></div>
     </div>
 
     <div class="row">
       <div class="box-12">
 
         <div class="row nested switch">
-          <div class="box-2">
+          <div class="box-1">
             <input type="checkbox" id="pri-1"/>
             <label for="pri-1"></label>
           </div>
@@ -101,7 +110,7 @@
         </div>
 
         <div class="row nested switch">
-          <div class="box-2">
+          <div class="box-1">
             <input type="checkbox" id="pri-2"/>
             <label for="pri-2"></label>
           </div>
@@ -111,7 +120,7 @@
         </div>
 
         <div class="row nested switch">
-          <div class="box-2">
+          <div class="box-1">
             <input type="checkbox" id="pri-3"/>
             <label for="pri-3"></label>
           </div>
@@ -121,7 +130,7 @@
         </div>
 
         <div class="row nested switch">
-          <div class="box-2">
+          <div class="box-1">
             <input type="checkbox" id="pri-4"/>
             <label for="pri-4"></label>
           </div>
@@ -131,7 +140,7 @@
         </div>
 
         <div class="row nested switch">
-          <div class="box-2">
+          <div class="box-1">
             <input type="checkbox" id="pri-5"/>
             <label for="pri-5"></label>
           </div>
@@ -141,7 +150,7 @@
         </div>
 
         <div class="row nested switch">
-          <div class="box-2">
+          <div class="box-1">
             <input type="checkbox" id="pri-6"/>
             <label for="pri-6"></label>
           </div>
@@ -150,24 +159,14 @@
           </div>
         </div>
 
-        <div class="row nested switch">
-          <div class="box-2">
-            <input type="checkbox" id="pri-1"/>
-            <label for="pri-1"></label>
-          </div>
-          <div class="box-10 label">
-            allow anyone to tag me
-          </div>
-        </div>
-
       </div>
     </div>
 
   </section>
 
-  <section>
+  <section class="submit">
     <div class="row">
-      <div class="box-12 title"><button>save</button></div>
+      <div class="box-12 title"><button class="button button-accent button-large">Save Changes</button></div>
     </div>
   </section>
 </div>

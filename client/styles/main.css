@@ -1,140 +1,237 @@
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
 body {
-  line-height: 1;
+  margin: 0;
 }
-ol,
-ul {
-  list-style: none;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
 }
-blockquote,
-q {
-  quotes: none;
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
 }
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: '';
-  content: none;
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden],
+template {
+  display: none;
+}
+a {
+  background: transparent;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+mark {
+  background: #ff0;
+  color: #000;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  border: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+figure {
+  margin: 1em 40px;
+}
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+pre {
+  overflow: auto;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+button {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input {
+  line-height: normal;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+legend {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+}
+optgroup {
+  font-weight: bold;
 }
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+td,
+th {
+  padding: 0;
+}
+.accent {
+  background-color: #02cc99;
+}
+.accent-mild {
+  background-color: #02b186;
+}
+.accent-dark {
+  background-color: #027f5f;
+}
+.primary {
+  background-color: #222324;
+}
+.primary-light {
+  background-color: #343c41;
+}
+* {
+  box-sizing: border-box;
+}
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+html {
+  font-size: 12px;
+}
+body {
+  font-family: ProximaNova, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.428571428571429;
+  color: #333;
+  background-color: #fff;
+}
+img {
+  vertical-align: middle;
+}
+img.round {
+  border-radius: 6px;
+}
+img.circ {
+  border-radius: 50%;
+}
 h1 {
-  font-size: 62px;
+  font-size: 36px;
 }
 h2 {
-  font-size: 52px;
+  font-size: 30px;
 }
 h3 {
-  font-size: 42px;
+  font-size: 24px;
 }
 h4 {
-  font-size: 32px;
+  font-size: 18px;
 }
 h5 {
-  font-size: 22px;
+  font-size: 14px;
 }
 h6 {
   font-size: 12px;
@@ -171,7 +268,7 @@ h6 {
   font-style: italic, oblique;
 }
 * {
-  font-family: ProximaNova, arial, sans-serif;
+  font-family: ProximaNova;
 }
 .box {
   flex: 1 1 8%;
@@ -201,8 +298,8 @@ h6 {
   justify-content: center;
 }
 .container {
-  margin-left: 360px;
-  margin-right: 360px;
+  margin-left: 350px;
+  margin-right: 350px;
 }
 .box-1 {
   flex-basis: 8.3333333333333%;
@@ -278,20 +375,65 @@ h6 {
     flex-basis: 100%;
   }
 }
-.accent {
+.button {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.428571428571429;
+  border-radius: 4px;
+  user-select: none;
+}
+.button:active:focus {
+  outline: none;
+}
+.button:hover,
+.button:focus {
+  color: #333;
+  text-decoration: none;
+  outline: none;
+}
+.button:active {
+  outline: 0;
+  background-image: none;
+  box-shadow: inset 0 3px 5px rgba(0,0,0,0.125);
+}
+.button-large {
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 20px;
+  border-radius: 6px;
+}
+.button-accent {
+  color: #fff;
   background-color: #02cc99;
+  border-color: #02b186;
 }
-.accent-mild {
-  background-color: #02b186;
+.button-accent:hover,
+.button-accent:focus,
+.button-accent:active {
+  color: #fff;
+  background-color: #02b88a;
+  border-color: #029c76;
 }
-.accent-dark {
-  background-color: #027f5f;
+.button-clear {
+  color: #c0c0c0;
+  background-color: rgba(0,0,0,0);
+  border-color: #c0c0c0;
 }
-.primary {
-  background-color: #222324;
-}
-.primary-light {
-  background-color: #343c41;
+.button-clear:hover,
+.button-clear:focus,
+.button-clear:active {
+  color: #c0c0c0;
+  background-color: rgba(0,0,0,0);
+  border-color: #a9a9a9;
 }
 body {
   padding-top: 40px;
@@ -332,15 +474,11 @@ nav .right img:hover {
 nav .right * {
   display: inline-block;
 }
-div {
-  box-sizing: border-box;
-}
 header {
   height: 425px;
   max-height: 425px;
   background: url("../images/van2x.jpg") no-repeat top center;
   background-size: cover;
-  box-sizing: border-box;
   padding-top: 120px;
 }
 header #new-post {
@@ -404,26 +542,50 @@ footer {
   margin-bottom: 10px;
 }
 #settings {
-  padding-top: 70px;
+  padding-top: 25px;
   height: 100%;
 }
 #settings section {
   border-bottom: solid #d3d3d3 2px;
   padding-bottom: 30px;
+  color: #343c41;
 }
-#settings section .row .title {
-  margin-top: 50px;
+#settings section .row.sep {
+  height: 50px;
+}
+#settings section .row.sep.title {
+  margin-top: 10px;
   margin-bottom: 20px;
 }
 #settings section .settings-form {
   padding-bottom: 30px;
-}
-#settings section .settings-form div:nth-child(2) {
   width: 100%;
 }
 #settings section .settings-form input {
+  outline: none;
+  border: none;
+  font-size: 1.1em;
+  line-height: 20px;
   width: 80%;
-  margin-bottom: 15px;
+  margin: 0px;
+}
+#settings * {
+  font-weight: 100;
+}
+.input-group {
+  border: #c0c0c0 1px solid;
+  border-radius: 3px;
+  height: 40px;
+  padding-left: 5px;
+  margin-bottom: 20px;
+  width: 80%;
+  padding-top: 5px;
+}
+.input-group .settings {
+  width: 80%;
+}
+.input-group span i {
+  color: #d3d3d3;
 }
 .label {
   padding-top: 25px;
@@ -433,6 +595,20 @@ footer {
 }
 .settings-img {
   display: block;
+}
+.main {
+  height: 80px;
+}
+.avatar {
+  margin-bottom: 20px;
+}
+section.submit {
+  margin-top: 50px;
+}
+button.change {
+  height: 25px;
+  width: 90px;
+  padding: 0pc;
 }
 input[id^=notify] {
   max-height: 0;
@@ -503,8 +679,8 @@ input[id^=pri] + label:after {
   position: absolute;
   opacity: 0;
   display: block;
-  height: 16px;
-  width: 16px;
+  height: 12px;
+  width: 12px;
   top: 3px;
   left: 3px;
   border-radius: 100%;
@@ -513,11 +689,11 @@ input[id^=pri] + label:after {
 }
 input[id^=pri] + label:hover:after {
   cursor: pointer;
-  background: #02cc99;
-  opacity: 0.6;
+  background: #027f5f;
+  opacity: 0.3;
 }
 input[id^=pri]:checked + label:after {
-  transform: scale(1.1);
+  transform: scale(1.3);
   opacity: 1;
   transform-origin: center;
   background: #02cc99;

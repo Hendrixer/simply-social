@@ -40,7 +40,7 @@ angular.module('simple.posts', [])
     'Buzz Usborne',
     'Scott Riley'
   ].reduce(function(Posts, name) {
-    Posts.push({ name:  name, img: 'images/users/' + name + '.jpg', message:getPost() });
+    Posts.push({ name:  name, img: 'http://img2.wikia.nocookie.net/__cb20120221170644/adventuretimewithfinnandjake/images/3/33/Lemongrab_Smile.jpg', message:getPost() });
     return Posts;
   }, []);
 }]);

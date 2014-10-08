@@ -1,26 +1,47 @@
 #settings
-  padding-top 70px
+  padding-top 25px
   height 100%
 
   & section
     border-bottom solid lightgray 2px
     padding-bottom 30px
+    color primary-light
 
-    & .row .title
-      margin-top 50px
-      margin-bottom 20px
+    & .row.sep
+      height 50px
+      &.title
+        margin-top 10px
+        margin-bottom 20px
 
     & .settings-form
       // border-bottom solid gray 2px
       padding-bottom 30px
-
-      & div:nth-child(2)
-        width 100%
+      width 100%
 
       & input
+        outline none
+        border none
+        font-size 1.1em
+        line-height 20px
         width 80%
-        margin-bottom 15px
+        margin 0px
+  & *
+    font-weight 100
 
+.input-group
+  border silver 1px solid
+  border-radius 3px
+  height 40px
+  padding-left 5px
+  margin-bottom 20px
+  width 80%
+  padding-top 5px
+
+  & .settings
+    width 80%
+
+  & span i
+    color lightgray
 .label
   padding-top 25px
 
@@ -28,6 +49,16 @@
   margin-bottom 15px
 .settings-img
   display block
+.main
+  height 80px
+.avatar
+  margin-bottom 20px
+section.submit
+  margin-top 50px
+button.change
+  height 25px
+  width 90px
+  padding 0pc
 
 inputs = email phone thing
 
@@ -101,8 +132,8 @@ input[id^=pri]
       position absolute
       opacity 0
       display block
-      height 16px
-      width 16px
+      height 12px
+      width 12px
       top 3px
       left 3px
       border-radius 100%
@@ -111,11 +142,11 @@ input[id^=pri]
 
     &:hover:after
       cursor pointer
-      background accent
-      opacity 0.6
+      background accent-dark
+      opacity 0.3
 
   &:checked + label:after
-    transform scale(1.1)
+    transform scale(1.3)
     opacity 1
     transform-origin center
     background accent
