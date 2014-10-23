@@ -1,0 +1,34 @@
+<div class="ss-modal">
+  <div class="modal-backdrop">
+    <!-- <button class="button close">x</button> -->
+  </div>
+  <div class="modal-box" ng-click="modal.close()">
+    <i class="fa fa-times"></i>
+  </div>
+  <div class="modal-dialog">
+
+    <div class="row">
+      <div class="box-12">
+        <h4>Create Message</h4>
+      </div>
+    </div>
+
+    <div class="row text">
+      <div class="modal-content box-12" ng-transclude></div>
+    </div>
+
+    <div class="row actions">
+      <div class="box-3">
+        <i class="fa fa-camera-retro"></i> Add Photo
+      </div>
+
+      <div class="box-3">
+        <i class="fa fa-camera-retro"></i> Add Video
+      </div>
+
+      <div class="box-3 offset-box-3">
+       <button class="button button-accent">Post</button>
+      </div>
+    </div>
+  </div>
+</div>

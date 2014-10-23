@@ -3,21 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <title>Simply Social</title>
-  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
   <div ui-view></div>
 
+  <ss-modal ng-show="modal.trigger" class="fx-fade-normal fx-speed-300 fx-easing-circ">
+    <textarea name="" id="new-message" placeholder="wassup ..."></textarea>
+  </ss-modal>
+
+  <script src="lib/lodash/dist/lodash.js"></script>
   <script src="lib/angular/angular.js"></script>
+  <script src="lib/angular-sanitize/angular-sanitize.js"></script>
   <script src="lib/ngFx/dist/ngFx.js"></script>
   <script src="lib/angular-ui-router/release/angular-ui-router.js"></script>
   <script src="app/app.js"></script>
   <script src="app/postsService.js"></script>
+  <script src="app/modal/modal.js"></script>
   <script src="app/main/main.js"></script>
   <script src="app/main/home/home.js"></script>
   <script src="app/main/home/postDirective.js"></script>
+  <script src="app/main/home/feedFilter.js"></script>
   <script src="app/main/profile/profile.js"></script>
   <script src="app/main/profile/settings/settings.js"></script>
 </body>

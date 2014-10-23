@@ -1,27 +1,62 @@
 angular.module('simple.posts', [])
 
 .factory('PostsService', [function() {
+  var pic = 'http://img2.wikia.nocookie.net/__cb20120221170644/adventuretimewithfinnandjake/images/3/33/Lemongrab_Smile.jpg';
 
   var randomPost = [
     {
       type: 'text',
-      message: 'How to Get Inspired the Right Way - Designmodo #@(http://bit.ly/ei9jas) Good stuff from @designmodo',
+      message: 'How to Get Inspired the Right Way - Designmodo http://bit.ly/ei9jas Good stuff from @designmodo',
       comments: [],
-      created: '3m'
+      created: 4
     },
     {
       type: 'photo',
-      message: 'My view this morning is simply beautiful... #@(http://instagram.com/p/mVJKdfEHi/)',
-      image: 'water-mountain',
+      message: 'My view this morning is simply beautiful... http://instagram.com/p/mVJKdfEHi/',
+      image: 'http://upload.wikimedia.org/wikipedia/commons/d/da/SF_From_Marin_Highlands3.jpg',
       comments: [],
-      created: '25m'
-    }
-  ];
+      created: 1
+    },
 
-  var getPost = function() {
-    var randomNumber = Math.floor(Math.random(0, randomPost.length - 1));
-    return randomPost[randomNumber];
-  };
+    {
+      type: 'text',
+      message: 'such a good time last time, I can\'t believe i actually did that, wow!',
+      comments: [],
+      created: 3
+    },
+
+    {
+      type: 'photo',
+      message: 'party last night was nuts! shot from the VIP section',
+      image: 'http://upload.wikimedia.org/wikipedia/commons/e/eb/The_Adicts_2011_SO36_03.jpg',
+      comments: [],
+      created: 4
+    },
+
+    {
+      type: 'text',
+      message: 'the next big there is here at my house #lovingMyNewTV #I\'m so lucky!!!',
+      comments: [],
+      created: 4
+    },
+
+    {
+      type: 'text',
+      message: 'the next big there is here at my house #lovingMyNewTV #I\'m so lucky!!!',
+      comments: [],
+      created: 4
+    },
+
+    {
+      type: 'text',
+      message: 'the next big there is here at my house #lovingMyNewTV #I\'m so lucky!!!',
+      comments: [],
+      created: 4
+    },
+
+
+
+  ];
 
   return [
     'Jessica Tuan',
@@ -31,16 +66,8 @@ angular.module('simple.posts', [])
     'Liang Shi',
     'Vitor Leal',
     'Pallavi Gupta',
-    'Jenny Shen',
-    'Jonathan Moreira',
-    'Jon Brennan',
-    'Michael Wong',
-    'Ed Wellbrook',
-    'Ignaciao Girl',
-    'Buzz Usborne',
-    'Scott Riley'
-  ].reduce(function(Posts, name) {
-    Posts.push({ name:  name, img: 'http://img2.wikia.nocookie.net/__cb20120221170644/adventuretimewithfinnandjake/images/3/33/Lemongrab_Smile.jpg', message:getPost() });
-    return Posts;
-  }, []);
+
+  ].map(function(name, i) {
+    return { name:  name, img: pic, message: randomPost[i] };
+  });
 }]);

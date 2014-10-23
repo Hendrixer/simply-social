@@ -15,6 +15,7 @@ footer,
 header,
 hgroup,
 main,
+menu,
 nav,
 section,
 summary {
@@ -36,7 +37,7 @@ template {
   display: none;
 }
 a {
-  background: transparent;
+  background-color: transparent;
 }
 a:active,
 a:hover {
@@ -203,11 +204,11 @@ html {
   font-size: 12px;
 }
 body {
-  font-family: ProximaNova, arial, sans-serif;
   font-size: 14px;
   line-height: 1.428571428571429;
   color: #333;
   background-color: #fff;
+  position: relative;
 }
 img {
   vertical-align: middle;
@@ -268,13 +269,14 @@ h6 {
   font-style: italic, oblique;
 }
 * {
-  font-family: ProximaNova;
+  font-family: ProximaNova, arial, sans-serif;
 }
 .box {
   flex: 1 1 8%;
   margin: 0 0 0.5rem 0;
   padding: 0.5em 10px;
   box-sizing: border-box;
+  height: 100%;
 }
 .box .center {
   flex-grow: 0;
@@ -303,39 +305,87 @@ h6 {
 }
 .box-1 {
   flex-basis: 8.3333333333333%;
+  height: 100%;
 }
 .box-2 {
   flex-basis: 16.6666666666667%;
+  height: 100%;
 }
 .box-3 {
   flex-basis: 25%;
+  height: 100%;
 }
 .box-4 {
   flex-basis: 33.3333333333333%;
+  height: 100%;
 }
 .box-5 {
   flex-basis: 41.6666666666667%;
+  height: 100%;
 }
 .box-6 {
   flex-basis: 50%;
+  height: 100%;
 }
 .box-7 {
   flex-basis: 58.3333333333333%;
+  height: 100%;
 }
 .box-8 {
   flex-basis: 66.6666666666667%;
+  height: 100%;
 }
 .box-9 {
   flex-basis: 75%;
+  height: 100%;
 }
 .box-10 {
   flex-basis: 83.3333333333333%;
+  height: 100%;
 }
 .box-11 {
   flex-basis: 91.6666666666667%;
+  height: 100%;
 }
 .box-12 {
   flex-basis: 100%;
+  height: 100%;
+}
+.offset-box-1 {
+  margin-left: 8.3333333333333%;
+}
+.offset-box-2 {
+  margin-left: 16.6666666666667%;
+}
+.offset-box-3 {
+  margin-left: 25%;
+}
+.offset-box-4 {
+  margin-left: 33.3333333333333%;
+}
+.offset-box-5 {
+  margin-left: 41.6666666666667%;
+}
+.offset-box-6 {
+  margin-left: 50%;
+}
+.offset-box-7 {
+  margin-left: 58.3333333333333%;
+}
+.offset-box-8 {
+  margin-left: 66.6666666666667%;
+}
+.offset-box-9 {
+  margin-left: 75%;
+}
+.offset-box-10 {
+  margin-left: 83.3333333333333%;
+}
+.offset-box-11 {
+  margin-left: 91.6666666666667%;
+}
+.offset-box-12 {
+  margin-left: 100%;
 }
 @media all and (max-width: 569px) {
   .box-1 {
@@ -446,13 +496,13 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 100;
   font-family: ProximaNova, arial, sans-serif;
   font-size: 1.1em;
 }
 nav .left {
   float: left;
-  margin-top: 20px;
+  margin-top: 17px;
   margin-left: 20px;
 }
 nav .left span {
@@ -462,17 +512,51 @@ nav .right {
   position: absolute;
   right: 0;
   top: 0;
-  margin-top: 20px;
-  margin-right: 20px;
+  margin-top: 12px;
+  margin-right: 10px;
 }
 nav .right img {
   border-radius: 4px;
+  width: 32px;
+  height: 32px;
+  margin-left: 20px;
 }
 nav .right img:hover {
   cursor: pointer;
 }
+nav .right .input-group {
+  background-color: #222324;
+  border: solid rgba(200,200,200,0.2) 1px;
+  border-radius: 4px;
+  width: 100%;
+  height: 32px;
+  vertical-align: $vertical-align-base;
+  padding: 6px 12px;
+}
+nav .right .input-group input {
+  background-color: #222324;
+  border: none;
+  outline: none;
+  line-height: $line-height-calculated;
+}
+nav .right .input-group input:focus {
+  outline: none;
+}
 nav .right * {
   display: inline-block;
+}
+.modal-button {
+  margin-right: 30px;
+  color: #02cc99;
+  font-size: 1.8em;
+  cursor: pointer;
+}
+.home {
+  cursor: pointer;
+  font-size: 1.3em;
+}
+.home i {
+  color: #02cc99;
 }
 header {
   height: 425px;
@@ -481,28 +565,36 @@ header {
   background-size: cover;
   padding-top: 120px;
 }
+header * {
+  color: #f0ffff;
+}
 header #new-post {
   background-color: #02b186;
   opacity: 0.6;
   height: 155px;
   padding: 20px;
+  padding-left: 35px;
   color: #fff;
 }
-header #new-post input {
+header #new-post .input {
+  margin-bottom: 25px;
+}
+header #new-post .input input {
   background-color: #02b186;
   border: none;
-  padding: 20px 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 10px;
   line-height: 28px;
   width: 100%;
   font-size: 1.9em;
-  color: #f0ffff;
   font-family: ProximaNova;
   font-weight: 100;
 }
-header #new-post input:focus {
+header #new-post .input input:focus {
   outline-width: 0;
 }
-header #new-post input::-webkit-input-placeholder {
+header #new-post .input input::-webkit-input-placeholder {
   color: #f0ffff;
 }
 header .links {
@@ -510,18 +602,24 @@ header .links {
   margin-top: 80px;
   height: 70px;
   padding-top: 30px;
-  color: #f0ffff;
 }
 header .links div {
   text-align: center;
   margin-right: 8px;
-  color: #f0ffff;
 }
 header .links div:hover {
   cursor: pointer;
 }
 header .links div.active {
   border-bottom: #02cc99 solid 4px;
+}
+.order {
+  margin-left: 168px;
+  text-align: right !important;
+  margin-right: 0px !important;
+}
+.order i:nth-child(2) {
+  margin-left: 10px;
 }
 footer {
   height: 228px;
@@ -536,10 +634,17 @@ footer {
   border: #c0c0c0 1px solid;
   border-radius: 3px;
   margin-bottom: 20px;
+}
+.post .content {
   padding: 15px;
 }
 .post-message h3 {
   margin-bottom: 10px;
+  margin-top: 0px;
+  font-weight: 100;
+}
+.post-message p a {
+  color: #777;
 }
 #settings {
   padding-top: 25px;
@@ -697,4 +802,73 @@ input[id^=pri]:checked + label:after {
   opacity: 1;
   transform-origin: center;
   background: #02cc99;
+}
+.modal-backdrop {
+  position: absolute;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.8;
+}
+.modal-dialog {
+  z-index: 10000;
+  position: fixed;
+  width: 50%;
+  height: 220px;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #d6d6d6;
+  box-shadow: 4px 4px 80px #000;
+  padding: 10px 16px;
+  border-radius: 4px;
+}
+.modal-dialog h4 {
+  margin-top: 2px;
+}
+.modal-dialog .text {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+.modal-dialog .actions div:first-child,
+.modal-dialog .actions div:nth-child(2) {
+  padding-top: 5px;
+}
+.modal-dialog .actions div:nth-child(3) {
+  padding-left: 70px;
+}
+.modal-dialog .actions div:nth-child(3) button {
+  width: 80px;
+}
+.modal-box {
+  width: 25px;
+  height: 25px;
+  position: fixed;
+  z-index: 10000;
+  top: 13%;
+  left: 78%;
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+  background: transparent;
+  border: solid 2px #777;
+  color: #777;
+  text-align: center;
+  cursor: pointer;
+}
+.modal-content {
+  background-color: #fff;
+  width: 100%;
+  height: 100px;
+  border-radius: 4px;
+}
+#new-message {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 0px;
+  outline: none;
+  resize: none;
+  border: none;
 }

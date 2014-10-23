@@ -3,6 +3,7 @@
   margin 0 0 0.5rem 0
   padding 0.5em 10px
   box-sizing border-box
+  height 100%
 
   & .center
     flex-grow 0
@@ -34,6 +35,11 @@ calcPercentage(num)
 for num in (1..12)
   .box-{num}
     flex-basis unit(calcPercentage(num), '%')
+    height 100%
+
+for num in (1..12)
+  .offset-box-{num}
+    margin-left unit(calcPercentage(num), '%')
 
 
 @media all and (max-width: 569px)

@@ -1,12 +1,23 @@
-<div class="post">
-  <div class="row">
-    <div class="box-2">
-      <img ng-src="{{ post.img }}" alt="">
+<div class="post box-{{ layout }}">
+  <div class="row content">
+    <div class="box-1">
+      <img ng-src="{{ post.img }}" alt="" class="round" width="80%">
     </div>
-    <div class="box-7 post-message" >
+    <div class="box-8 post-message" >
       <h3>{{ post.name }}</h3>
-      <p>{{ post.message.message }}</p>
+      <p ng-bind-html="post.message.message | linky"></p>
     </div>
     <div class="box-3">icons</div>
+  </div>
+  <div class="row" ng-if="post.message.type === 'photo'">
+    <div class="box-12 post-photo">
+      <img ng-src="{{ post.message.image }}" width="100%" height="315px" alt="">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="box-12">
+      buttons
+    </div>
   </div>
 </div>

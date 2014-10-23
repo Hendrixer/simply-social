@@ -9,13 +9,13 @@ nav
   top 0
   left 0
   width 100%
-  z-index 1000
+  z-index 100
   font-family ProximaNova, arial, sans-serif
   font-size 1.1em
 
   & .left
     float left
-    margin-top 20px
+    margin-top 17px
     margin-left 20px
 
     & span
@@ -25,13 +25,47 @@ nav
     position absolute
     right 0
     top 0
-    margin-top 20px
-    margin-right 20px
+    margin-top 12px
+    margin-right 10px
 
     & img
       border-radius 4px
+      width 32px
+      height 32px
+      margin-left 20px
       &:hover
         cursor pointer
+    & .input-group
+      background-color primary
+      border solid rgba(200,200,200,0.2) 1px
+      border-radius $border-radius-base
+      width 100%
+      height 32px
+      vertical-align $vertical-align-base
+      padding $padding-base-vertical $padding-base-horizontal
+      & input
+        background-color primary
+        border none
+        outline none
+        line-height $line-height-calculated
+        &:focus
+          outline none
 
     & *
       display inline-block
+
+.modal-button
+  margin-right 30px
+  color accent
+  font-size 1.8em
+  cursor pointer
+
+.home
+  cursor pointer
+  font-size 1.3em
+
+  & i
+    color accent
+
+
+

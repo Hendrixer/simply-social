@@ -1,11 +1,19 @@
 <nav>
   <div ui-sref="simple.main.home"class="left home">
-    <i class="fa fa-camera-retro"></i> <span>simply</span>social
+    <i class="fa fa-comments-o"></i> <span>simply</span>social
   </div>
   <div class="right">
-    <i class="fa fa-camera-retro"></i>
-    <input type="text">
-    <a ui-sref="simple.main.profile.settings"><img src="http://img2.wikia.nocookie.net/__cb20120221170644/adventuretimewithfinnandjake/images/3/33/Lemongrab_Smile.jpg" width="20%"alt="" /></a>
+    <div class="row">
+      <div class="box-1 modal-button" ng-click="app.modal.open()"><i class="fa fa-comment-o"></i></div>
+      <div class="box-9">
+        <div class="input-group">
+          <input type="text"><i class="fa fa-search"></i>
+        </div>
+      </div>
+      <div class="box-3">
+        <a ui-sref="simple.main.profile.settings"><img src="http://img2.wikia.nocookie.net/__cb20120221170644/adventuretimewithfinnandjake/images/3/33/Lemongrab_Smile.jpg" width="20%"alt="" /></a>
+      </div>
+    </div>
   </div>
 </nav>
 <div ui-view></div>

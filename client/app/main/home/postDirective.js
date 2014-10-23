@@ -5,11 +5,11 @@ angular.module('simple.main.home.postDirective', [])
     templateUrl: 'app/main/home/post-directive.html',
     replace: true,
     scope: {
-      post: '='
+      post: '=',
+      layout: '@'
     },
-    link: function(scope, element) {
-      var is = /(?!#@\()(http|https)\:\/\/[a-zA-Z0-9].+?(?=\))/.test(element[0].innerHTML);
-      console.log(is);
+    link: function(scope) {
+      // DOM things here
     }
   };
 }]);

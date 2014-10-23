@@ -3,7 +3,18 @@
 
     <div class="row">
       <div id="new-post" class="box-12">
-        <input type="text" placeholder="What's on your mind?">
+        <div class="row nested input">
+          <input type="text" placeholder="What's on your mind?">
+        </div>
+        <div class="row nested">
+          <div class="box-3">
+             <i class="fa fa-camera-retro"></i> Add Photo
+          </div>
+
+          <div class="box-3">
+             <i class="fa fa-camera-retro"></i> Add Video
+          </div>
+        </div>
       </div>
     </div>
 
@@ -19,12 +30,28 @@
           Photos
       </div>
       <div class="box-2">Videos</div>
+
+      <div class="box-2 order">
+        <i class="fa fa-navicon" ng-click="home.grid(true)"></i>
+        <i class="fa fa-th" ng-click="home.grid()"></i>
+      </div>
+      <!-- <div class="box-1"> -->
+      <!-- </div> -->
     </div>
 
   </section>
 </header>
 
-  <section class="container" id="feed">
-    <ss-post post="post" ng-repeat="post in home.posts | filter:home.filter | orderBy:'message.created'"></ss-post>
+  <section class="{{ home.feedClass }}" id="feed" ng-switch on="home.layout">
+
+    <div ng-switch-default class="row fx-fade-normal fx-speed-200">
+      <div class="fx-fade-up fx-speed-600 row" ng-repeat="post in home.posts | feedFilter:home.filter | orderBy:'message.created'">
+        <ss-post post="post" layout="12"></ss-post>
+      </div>
+    </div>
+
+    <div ng-switch-when="grid" class="row fx-fade-normal fx-speed-200">
+      <ss-post post="post" layout="4" class="fx-fade-up fx-speed-600" ng-repeat="post in home.posts | feedFilter:home.filter | orderBy:'message.created'"></ss-post>
+    </div>
   </section>
 <footer>footer</footer>

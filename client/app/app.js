@@ -3,9 +3,11 @@
 ***/
 angular.module('simple', [
   'ngFx',
+  'ngSanitize',
   'ui.router',
   'simple.main',
-  'simple.posts'
+  'simple.posts',
+  'simple.modal'
 ])
 .config(['$stateProvider','$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise('/');
@@ -15,6 +17,10 @@ angular.module('simple', [
     .state('simple', {
       abstract: true,
       // url: '/app',
-      templateUrl: 'app/app.html'
+      templateUrl: 'app/app.html',
+      controller: 'AppController as app'
   });
+}])
+.controller('AppController', ['Modal', function(Modal) {
+  this.modal = Modal;
 }]);
